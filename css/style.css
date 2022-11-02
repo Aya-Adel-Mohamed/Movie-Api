@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white-color:#fff;
+    --body-backGroundColor:#222;
+    --transparent-color:transparent;
+    --tomato-color:tomato;
+    --dark-color:#222;
+    --body-fontfamily:'Playfair Display', serif;
+}
+body{
+    color: var(--white-color);
+    font-family: var(--body-fontfamily);
+    background-color:var(--body-backGroundColor);
+}
+.left,.right{
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+.left{
+    left:-250px;
+    max-width: 250px;
+    background-color:var(--body-backGroundColor);
+}
+.right{
+    left:0px;
+	max-width: 60px;
+}
+.left a {
+    color: var(--white-color);
+    transition: all 0.6s;
+}
+.left a:hover{
+    color: var(--tomato-color)
+}
+.left li {
+    padding: 22px 5px;
+    position: relative;
+    top: 300px;
+	opacity: 0;
+}
+.left .social-icons a{
+    margin: 0 0.5rem;
+}
+.right img {
+   max-width: 38px;
+}
+.right button{
+    border:0;
+}
+.right i {
+    font-size: 26px;
+    color: var(--dark-color)
+}
+
+.right .icons a i
+{   font-size: 22px;
+    padding: 15px 20px;
+    transition: all 0.6s;
+} 
+.right .icons a i:hover{
+    color: var(--tomato-color);
+}
+.form-control{
+    background-color: var(--transparent-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 800;
+    border:0;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
+    border-radius: 0;
+   
+}
+.form-control:focus{
+    background-color: var(--transparent-color);
+    color: var(--white-color);
+}
+.layer{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right:0;
+    bottom:0;
+    padding: 20px;
+    transition: top 0.6s ease-in-out;
+}
+.movie-card:hover .layer{
+    top:0;
+}
+@media screen and (max-width:1100px) {
+    .container{
+        max-width: calc(100% - 50px)!important;
+        margin: 0 0 0 auto !important;
+        padding: 0;
+    }
+}
+.fa-xmark{
+    color:var(--dark-color);
+    opacity: 0.5;
+}
+.fa-xmark:hover{
+    opacity: 1;
+}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{
+    appearance: none;
+}
+.form-content p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.alert-danger {
+    --bs-alert-color: #880e18;
+    --bs-alert-bg: #f3cbce;
+    --bs-alert-border-color: #880e18;
+}
+.form-content .form-control:focus{
+    background-color: var(--transparent-color);
+    color: var(--white-color);
+}

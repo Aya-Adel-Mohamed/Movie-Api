@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Api</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="item">
+        <div class="left vh-100 px-3 d-flex align-content-between flex-wrap">
+            <nav>
+                <ul class="nav-items">
+                  <li class="navbar-link list-unstyled pt-5">
+                      <a href="#" class="text-decoration-none"  moviesCat="movie/now_playing">Now playing</a>
+                  </li>
+                  <li class="navbar-link list-unstyled">
+                      <a href="#" class="text-decoration-none" moviesCat="movie/popular">Popular</a>
+                  </li>
+                  <li class="navbar-link list-unstyled">
+                      <a href="#" class="text-decoration-none" moviesCat="movie/top_rated">Top Rated</a>
+                  </li>
+                  <li class="navbar-link list-unstyled">
+                     <a href="#" class="text-decoration-none" moviesCat="trending/all/day">Trending</a>
+                 </li>
+                  <li class="navbar-link list-unstyled">
+                      <a href="#" class="text-decoration-none" moviesCat="movie/upcoming">Upcoming</a>
+                  </li>
+                  <li class="navbar-link list-unstyled">
+                      <a href="#contactUs" class="text-decoration-none" >Contact Us</a>
+                  </li>
+                </ul>
+            </nav>
+            <div class="social-icons ps-4 mt-5 pb-3">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fas fa-globe"></i></a>
+               <p class="text-white mt-4">Copyright Â© 2019 All Rights Reserved.</p>
+            </div>
+          </div>
+          <div class="right bg-light p-2 vh-100 d-flex align-content-between justify-content-center flex-wrap">
+             <img src="logo.png" alt="logo-movie-app">
+             <button class="button" id="btnOpen">
+                <i id="OpenCloseIcon"class="fas fa-bars"></i>
+             </button>
+             <div class="icons">
+                 <a href="#"><i class="fas fa-share-alt"></i></a>
+                 <a href="#"><i class="fas fa-globe"></i></a>
+             </div>
+        </div>
+    </section>
+    <section class="p-5">
+        <div class="container">
+            <div class="row gy-2 gx-5">
+                <div class="col-md-6">
+                    <input type="search" class="form-control" placeholder="Get Movies By Word...." id="searchByWord">
+                </div>
+                <div class="col-md-6">
+                    <input type="search" class="form-control" placeholder="search...." id="searchIn">
+                </div>
+            </div>
+            <div class="row my-5" id="searchMoviesResult">
+          
+            </div>
+            <div class="row my-5" id="movies-content">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us mb-5 px-5" id="contactUs">
+            <div class="container">
+               <h2>Contact Us...</h2>
+               <form id="formData">
+                  <div class="row mt-5 gy-3">
+                     <div class="col-md-6">
+                        <div class="form-content">
+                           <input type="text" placeholder="Enter Your Name" class="form-control" name="name"/>
+                           <p class="alert alert-danger p-2 d-none">Your Name is not valid must be at least two characters</p>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-content">
+                           <input type="email" placeholder="Enter Email" class="form-control"name="email"/>
+                           <p class="alert alert-danger p-2 d-none">Entre valid email must be as Example@yahoo.com</p>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-content">
+                           <input type="tel" placeholder="Enter Phone" class="form-control" name="tel"/>
+                           <p class="alert alert-danger p-2  d-none">Enter valid Phone Number </p>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-content">
+                           <input type="number" placeholder="Enter Age" class="form-control" name="number"/>
+                           <p class="alert alert-danger p-2  d-none">Entre valid Age</p>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-content">
+                           <input type="password" placeholder="Enter Password" class="form-control"name="password"/>
+                           <p class="alert alert-danger p-2  d-none">Entre Valid password must be minimum 8 characters, at least one letter and one number</p>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-content">
+                           <input type="password" placeholder="Enter RePassword" class="form-control"/>
+                           <p class="alert alert-danger p-2 d-none">Entre Valid Re-password</p>
+                        </div>
+                     </div>
+                  </div>
+                  <button type="submit" class="btn btn-outline-danger mt-4 " id="submit" disabled>Submit</button>
+               </form>
+            </div>
+         </section>
+
+
+
+
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
